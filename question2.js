@@ -9,10 +9,20 @@
 // equalLetterPositions("detsamma", "detta") // Returnerar 4 (d, e, t, a är på samma position i båda strängarna)
 
 function equalLetterPositions(str1, str2) {
-let str1 = "go";
-let str2 = "DO";
-
-    // Din kod här
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+  
+    let count = 0;
+    let minLength = Math.min(str1.length, str2.length);
+  
+    for (let i = 0; i < minLength; i++) {
+      if (str1[i] === str2[i]) {
+        count++;
+      }
+    }
+  
+    return count;
   }
   
   module.exports = equalLetterPositions;
+  

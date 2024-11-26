@@ -12,14 +12,9 @@ const product = {
   // Output: { name: "Laptop", price: 15000, brand: "TechBrand", discount: 10 }
   
   function addDiscount(product, discount) {
-    const updateMyProduct = {
-        name: "Laptop",
-        price: 15000, 
-        brand: "TechBrand", 
-        discount: 10
+  
     } 
-const addDiscount = {...product, ...updateMyProduct}
-console.log(addDiscount(product));
-  }
+    return { ...product, discount: discount };
+  
   
   exports = addDiscount;

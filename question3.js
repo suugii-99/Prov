@@ -19,7 +19,16 @@ console.log(filterItems(name, "J"));
 }
 
     // Din kod här
-  }
+    function filterNames(names, letter) {
+        return names.filter(name => name.charAt(0) === letter);
+      }
+      
+      console.log(filterNames(["John", "Mary", "Peter", "Jane"], "J")); // ["John", "Jane"]
+console.log(filterNames(["John", "Mary", "Peter", "Jane"], "P")); // ["Peter"]
+console.log(filterNames(["John", "Mary", "Peter", "Jane"], "X")); // []
+
+      
+    }
   
   module.exports = filterNames;
   
